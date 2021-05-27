@@ -33,6 +33,8 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
+const GITchanges = 0
+
 reviewSchema.index({ tour: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, async function (next) {
